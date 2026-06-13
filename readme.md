@@ -3,20 +3,22 @@
 > A PowerShell-based Windows Security Auditing Framework created by **DrArrow** for rapid endpoint assessment and HTML-based security reporting.
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue)
-![Windows](https://img.shields.io/badge/Platform-Windows-success)
+![Platform](https://img.shields.io/badge/Platform-Windows-success)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## Demo
+## 🎬 Demo
 
-![DRyhon Demo](./screenshots/dryhon-demo.gif)
+![DRyhon Demo](screenshots/dryhon-demo.gif)
+
+---
 
 ## 📖 Overview
 
-DRyhon is a lightweight security auditing tool written entirely in PowerShell. It performs essential security checks on Windows systems and generates a professional HTML report for security reviews, incident response, and system health assessments.
+DRyhon is a lightweight Windows Security Auditing Framework developed in PowerShell. It helps security professionals, system administrators, and IT teams perform quick endpoint assessments by collecting security-relevant information and generating professional HTML reports.
 
-The tool leverages native Windows and PowerShell capabilities to gather information about processes, event logs, user accounts, network connections, and critical system files.
+The tool leverages native Windows and PowerShell capabilities, making it lightweight, portable, and free from third-party dependencies.
 
 ---
 
@@ -24,26 +26,21 @@ The tool leverages native Windows and PowerShell capabilities to gather informat
 
 ### 🔍 Process Analysis
 
-* Displays top CPU-consuming processes
-* Helps identify suspicious or resource-intensive applications
-
-
+* Displays the top CPU-consuming processes.
+* Helps identify suspicious or resource-intensive applications.
 
 ### 📋 Security Event Monitoring
 
-* Retrieves recent Windows Security Event Logs
+* Retrieves recent Windows Security Event Logs.
 * Displays:
 
-  * Timestamp
+  * Event Timestamp
   * Event ID
   * Severity Level
 
-
-
-
 ### 🛡️ File Integrity Verification
 
-Calculates SHA256 hashes for critical Windows files:
+Calculates SHA256 hashes for critical Windows system files:
 
 * `C:\Windows\System32\ntoskrnl.exe`
 * `C:\Windows\System32\winlogon.exe`
@@ -51,12 +48,8 @@ Calculates SHA256 hashes for critical Windows files:
 Useful for:
 
 * Integrity verification
-* Baseline comparison
+* Baseline comparisons
 * Malware investigations
-
-![Class](./screenshots/6.jpg)
-
-
 
 ### 👤 User Account Auditing
 
@@ -66,7 +59,6 @@ Collects information about:
 * Account status
 * Last logon time
 
-
 ### ⚠️ Suspicious Account Detection
 
 Identifies:
@@ -74,34 +66,23 @@ Identifies:
 * Disabled accounts
 * Recently active accounts
 
-![Class](./screenshots/5.jpg)
+### 🌐 Network Connection Monitoring
 
-
-### 🌐 Network Monitoring
-
-Enumerates active TCP connections including:
+Lists active TCP connections including:
 
 * Local Address
 * Local Port
 * Remote Address
 * Remote Port
 
-![Class](./screenshots/2.jpg)
-
-
-
-
 ### 🚨 Suspicious Port Detection
 
-Checks for connections on commonly abused ports:
+Monitors commonly abused ports:
 
-| Port | Description                                    |
-| ---- | ---------------------------------------------- |
-| 1337 | Potential Backdoor Activity                    |
-| 4444 | Reverse Shell / Penetration Testing Frameworks |
-
-![Class](./screenshots/4.jpg)
-
+| Port | Description                        |
+| ---- | ---------------------------------- |
+| 1337 | Potential Backdoor Activity        |
+| 4444 | Reverse Shell / Testing Frameworks |
 
 ### 💻 System Information Collection
 
@@ -114,15 +95,29 @@ Collects:
 
 ### 📊 Professional HTML Reporting
 
-Features:
+Generates:
 
-* Dark-themed interface
+* Dark-themed reports
 * Color-coded alerts
 * Structured tables
-* Easy-to-read layout
+* Easy-to-read security summaries
 
+---
 
-![Class](./screenshots/1.jpg)
+## 🚀 Project Highlights
+
+* Pure PowerShell implementation
+* No external dependencies
+* Automated HTML report generation
+* SHA256 file integrity monitoring
+* Windows Security Event Log analysis
+* User account auditing
+* Network connection monitoring
+* Suspicious port detection
+* Professional report formatting
+* MIT Licensed
+* Created by DrArrow
+
 ---
 
 ## 📂 Project Structure
@@ -132,14 +127,24 @@ DRyhon/
 │
 ├── DRyhon.ps1
 ├── README.md
-└── AuditReports/
+│
+├── screenshots/
+│   ├── dryhon-demo.gif
+│   ├── banner.png
+│   ├── report-overview.png
+│   ├── processes.png
+│   ├── security-events.png
+│   ├── network-connections.png
+│   └── file-integrity.png
+│
+└── reports/
 ```
 
 ---
 
 ## ⚙️ Requirements
 
-### Supported Platforms
+### Operating Systems
 
 * Windows 10
 * Windows 11
@@ -157,7 +162,20 @@ Run PowerShell as **Administrator** for full functionality.
 
 ---
 
-## 🚀 Usage
+## 📥 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/DrArrow/DRyhon-Security-Audit
+cd DRyhon
+```
+
+Or download the PowerShell script directly.
+
+---
+
+## ▶️ Usage
 
 Run the script from an elevated PowerShell session:
 
@@ -167,34 +185,64 @@ powershell.exe -ExecutionPolicy Bypass -File .\DRyhon.ps1
 
 ---
 
-## 📄 Report Output
+## 📄 Sample Output
 
-Generated reports are stored in:
-
-```text
-C:\AuditReports\
-```
-
-Example:
+### Console Output
 
 ```text
-C:\AuditReports\DRArrow_20260610_143501.html
+=== DRyhon Security Audit ===
+
+Collecting system information...
+Analyzing security events...
+Checking network connections...
+
+Report saved to C:\AuditReports\DRyhon_20260611_120015.html
+
+=== DRyhon Audit Completed - Stay Secure ===
 ```
 
 ---
 
-## 📈 Report Sections
+## 📊 Generated Report Sections
 
-The generated report includes:
+The generated HTML report includes:
 
 * Top Processes by CPU Usage
 * Recent Security Events
-* File Integrity Check
-* Local Users
+* File Integrity Checks
+* Local User Accounts
 * Suspicious Accounts
 * Active Network Connections
 * Suspicious Ports
 * System Information
+
+---
+
+## 📸 Screenshots
+
+### Tool Startup
+
+![Banner](screenshots/banner.png)
+
+### HTML Report Overview
+
+![Report Overview](screenshots/1.jpg)
+
+### Process Analysis
+
+![Processes](screenshots/4.JPG)
+
+### Security Event Monitoring
+
+![Security Events](screenshots/3.JPG)
+
+### Network Monitoring
+
+![Network Connections](screenshots/2.JPG)
+
+### File Integrity Verification
+
+![File Integrity](screenshots/6.JPG)
 
 ---
 
@@ -209,8 +257,8 @@ The generated report includes:
 ### Incident Response
 
 * Initial Host Triage
-* Suspicious Activity Investigation
-* Evidence Collection Support
+* Security Investigations
+* Evidence Collection
 
 ### System Administration
 
@@ -218,22 +266,22 @@ The generated report includes:
 * Network Visibility
 * System Health Monitoring
 
-### Cybersecurity Training
+### Cybersecurity Education
 
-* Lab Environments
-* Security Demonstrations
-* PowerShell Learning Projects
+* Security Labs
+* PowerShell Learning
+* Audit Demonstrations
 
 ---
 
 ## 🔮 Future Enhancements
 
-Planned features:
+Planned features include:
 
-* Windows Defender Status Checks
+* Windows Defender Status Monitoring
 * Scheduled Task Auditing
-* Service Enumeration
 * Startup Program Analysis
+* Service Enumeration
 * Registry Auditing
 * IOC Scanning
 * PDF Report Export
@@ -249,7 +297,7 @@ Planned features:
 
 Cybersecurity Enthusiast | Security Researcher | IT Professional
 
-DRyhon was developed to provide a fast, simple, and effective way to perform Windows security audits using native PowerShell capabilities.
+DRyhon was developed to provide a fast, lightweight, and effective method for auditing Windows systems using native PowerShell capabilities.
 
 ---
 
@@ -270,7 +318,7 @@ Users are responsible for ensuring compliance with all applicable laws, regulati
 
 MIT License
 
-Copyright © 2026 DrArrow
+Copyright (c) 2026 DrArrow
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -289,3 +337,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
